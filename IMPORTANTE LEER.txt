@@ -1,0 +1,24 @@
+Para hacerte usuario Admin registra primero tu correo electrónico (necesitas que se visualice en la bd en la tabla User.
+después de ver que si esta vas a abrir una terminal de laragon presionando abajo a la izquierda a un lado donde dice "search" o "Buscar" le das click, iniciar o star y ahi sale otra terminal es esa terminal vas a poner lo siguiente en este orden 
+
+#para entrar a los permisos de usuario 
+
+php artisan tinker 
+
+#aqui debes de poner el correo con el que quieres que sea admin en las comillas simples, después de 'email', 
+
+$user = App\Models\User::where('email', '')->first();
+
+#este es para ver que rol tiene tu correo 
+echo $user->role;
+
+#con este comando le das admin si quieres que sea usuario pues donde dice 'admin' le pones 'user'
+$user->role = 'admin';
+
+#con este comando guardas y listo 
+$user->save();
+
+#despues sales de tinker
+exit
+
+OJO No cierres la terminal porque va a quitar los permisos de admin la neta aun no se como hacer que se quede para siempre el admin pero ya ando investigando eso, y pues listo disfruta de la pag, investiga, busca, destruye, no pasa nada igual en el git ya esta el código de respaldo  
