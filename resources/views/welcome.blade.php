@@ -67,10 +67,11 @@
             @if (Route::has('login'))
                 <div class="fixed top-0 right-0 p-6 text-right z-20">
                     {{-- Nuevos elementos del menú con rutas con nombre --}}
-                        <a href="{{ route('sucursales.index') }}" class="font-semibold text-white hover:text-gray-300 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-blue-500 transition duration-300 mr-4">Sucursales</a>
-                        <a href="{{ route('hoteles.index') }}" class="font-semibold text-white hover:text-gray-300 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-blue-500 transition duration-300 mr-4">Hoteles</a>
-                        <a href="{{ route('vuelos.index') }}" class="font-semibold text-white hover:text-gray-300 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-blue-500 transition duration-300 mr-4">Vuelos</a>
-                        <a href="{{ route('reservaciones.index') }}" class="font-semibold text-white hover:text-gray-300 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-blue-500 transition duration-300 mr-4">Reservaciones</a>
+                        <a href="{{ route('ofertas.index') }}" class="font-semibold text-white hover:text-gray-300 dark:text-white-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-blue-500 transition duration-300 mr-4">Ofertas Especiales  </a>
+                        <a href="{{ route('sucursales.index') }}" class="font-semibold text-white hover:text-gray-300 dark:text-white-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-blue-500 transition duration-300 mr-4">Sucursales</a>
+                        <a href="{{ route('hoteles.index') }}" class="font-semibold text-white hover:text-gray-300 dark:text-white-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-blue-500 transition duration-300 mr-4">Hoteles</a>
+                        <a href="{{ route('vuelos.index') }}" class="font-semibold text-white hover:text-gray-300 dark:text-white-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-blue-500 transition duration-300 mr-4">Vuelos</a>
+                        <a href="{{ route('reservaciones.index') }}" class="font-semibold text-white hover:text-gray-300 dark:text-white-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-blue-500 transition duration-300 mr-4">Reservaciones</a>
                     @auth
                         <a href="{{ url('/dashboard') }}" class="font-semibold text-white hover:text-gray-300 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500 transition duration-300">Dashboard</a>
                     @else
@@ -89,7 +90,7 @@
                 <div class="relative z-10 text-center max-w-4xl mx-auto">
                     <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight mb-4 animate-fade-in-down">Descubre Tu Próxima Aventura</h1>
                     <p class="text-lg sm:text-xl md:text-2xl mb-8 opacity-90 animate-fade-in-up">Explora destinos exóticos, vive experiencias inolvidables y crea recuerdos para toda la vida.</p>
-                    <a href="#destinos-populares" id="scroll-down-button" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full text-lg shadow-lg transform hover:scale-105 transition duration-300 ease-in-out">
+                    <a href="{{ route('ofertas.index') }}" id="scroll-down-button" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full text-lg shadow-lg transform hover:scale-105 transition duration-300 ease-in-out">
                         Ver Ofertas Especiales
                     </a>
                     {{-- Flecha para bajar --}}

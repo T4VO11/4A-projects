@@ -58,6 +58,7 @@
                 </div>
                 <div class="flex items-center space-x-4">
                     {{-- Menú de navegación --}}
+                    <a href="{{ route('ofertas.index') }}" class="navbar-link">Ofertas Especiales</a>
                     <a href="{{ route('sucursales.index') }}" class="navbar-link">Sucursales</a>
                     <a href="{{ route('hoteles.index') }}" class="navbar-link">Hoteles</a>
                     <a href="{{ route('vuelos.index') }}" class="navbar-link">Vuelos</a>

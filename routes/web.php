@@ -10,6 +10,7 @@ use App\Http\Controllers\HotelController;
 use App\Http\Controllers\VueloController;
 use App\Http\Controllers\ReservacionController;
 use App\Http\Controllers\DashboardController; 
+use App\Http\Controllers\OfertasController;
 
 /*
 |--------------------------------------------------------------------------
@@ -95,6 +96,8 @@ Route::middleware('auth')->group(function () {
     Route::delete('/vuelos/{id}', [VueloController::class, 'destroy'])->name('vuelos.destroy');
 
     Route::get('/vuelos/comprar/confirmar/{id}', [VueloController::class, 'confirmPurchase'])->name('vuelos.confirmPurchase');
+    Route::get('/ofertas', [OfertasController::class, 'index'])->name('ofertas.index');
+    Route::get('/ofertas/{offerId}', [OfertasController::class, 'showDetails'])->name('ofertas.showDetails'); // {offerId} para el ID de la oferta
 
 });
 
