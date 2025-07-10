@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\ReservacionController;
 use Carbon\Carbon;
+use Illuminate\Support\Facades\Storage; 
 
 class VueloController extends Controller
 {

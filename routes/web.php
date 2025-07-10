@@ -88,6 +88,10 @@ Route::middleware('auth')->group(function () {
     Route::put('/hoteles/{id}', [HotelController::class, 'update'])->name('hoteles.update');
     Route::delete('/hoteles/{id}', [HotelController::class, 'destroy'])->name('hoteles.destroy');
 
+    Route::get('/hoteles/{hotelId}/habitaciones/{roomTypeId}/editar', [HotelController::class, 'editRoomType'])->name('hotel_room_types.edit');
+    Route::put('/hoteles/{hotelId}/habitaciones/{roomTypeId}', [HotelController::class, 'updateRoomType'])->name('hotel_room_types.update');
+    Route::delete('/hoteles/{hotelId}/habitaciones/{roomTypeId}', [HotelController::class, 'destroyRoomType'])->name('hotel_room_types.destroy');
+
     Route::get('/vuelos/create', [VueloController::class, 'create'])->name('vuelos.create');
     Route::post('/vuelos', [VueloController::class, 'store'])->name('vuelos.store');
     Route::get('/vuelos/{id}', [VueloController::class, 'show'])->name('vuelos.show');

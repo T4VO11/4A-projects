@@ -123,16 +123,13 @@
                         {{-- Botón Final de Confirmación (Aquí irían las opciones de pago) --}}
                         <div class="text-center mt-6">
                             <p class="text-sm text-gray-500 dark:text-gray-400 mb-4">Selecciona tu método de pago:</p>
-                            <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg shadow-md transition duration-300 ease-in-out">
-                                Pagar con Tarjeta (Ejemplo)
+<a href="https://www.paypal.com/ncp/payment/3M3XDBXS2BD74"
+   target="_blank"
+   rel="noopener noreferrer"
+   class="inline-block bg-yellow-500 hover:bg-yellow-600 text-white font-semibold px-4 py-2 rounded">
+   💳 Pagar con PayPal
+</a>
                             </button>
-                            <button type="button" class="w-full bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-3 px-6 rounded-lg shadow-md transition duration-300 ease-in-out mt-3">
-                                Pagar con PayPal (Ejemplo)
-                            </button>
-                            <button type="button" class="w-full bg-black hover:bg-gray-800 text-white font-bold py-3 px-6 rounded-lg shadow-md transition duration-300 ease-in-out mt-3">
-                                Pagar con Google Pay (Ejemplo)
-                            </button>
-
                             <p class="text-xs text-gray-500 dark:text-gray-400 mt-4">
                                 Al confirmar, aceptas nuestros términos y condiciones.
                             </p>

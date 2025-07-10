@@ -44,4 +44,16 @@ class Hotel extends Model
     {
         return $this->hasMany(Reservacion::class, 'idHotelFK', 'idHotel');
     }
+        public function images()
+    {
+        return $this->hasMany(HotelImage::class, 'hotel_id', 'idHotel')->orderBy('order');
+    }
+
+    /**
+     * Relación: Un hotel tiene muchos tipos de habitaciones.
+     */
+    public function roomTypes()
+    {
+        return $this->hasMany(HotelRoomType::class, 'hotel_id', 'idHotel');
+    }
 }
